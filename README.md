@@ -1,3 +1,6 @@
+Credits:https://www.opensourceforu.com/2011/08/io-control-in-linux/
+
+
 # IOCTL-Interface
 Input/Output Control (ioctl, in short) is a common operation, or system call, available in most driver categories. It is a one-bill-fits-all kind of system call. If there is no other system call that meets a particular requirement, then ioctl() is the one to use.
 
@@ -22,6 +25,3 @@ Note that both the command and command argument type definitions need to be shar
 
 Querying driver-internal variables
 To better understand the boring theory explained above, here’s the code set for the “debugging a driver” example mentioned earlier. This driver has three static global variables: status, dignity, and ego, which need to be queried and possibly operated from an application. The header file query_ioctl.h defines the corresponding commands and command argument type. query_ioctl.c is where the ioctl interfaces are implemented in the device driver. query_app.c expolits the device driver functionalities using ioctl system call. 
-
-
-Credits:https://www.opensourceforu.com/2011/08/io-control-in-linux/
